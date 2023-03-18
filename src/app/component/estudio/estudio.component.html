@@ -1,0 +1,72 @@
+<div class="containerColumn">
+
+    <div class="item2">
+        
+            <a href="" onclick="est(); return false;">
+                <i class="bi bi-eye-fill btn-bi" id="add2" onclick="FavId2()"></i>
+            </a>
+            <a href="" onclick="est(); return false;">
+                <i  class="bi bi-eye-slash btn-bi" id="remove2" onclick="Removefav2()"></i>
+            </a>
+            
+            <button style="margin-right: 20px;" class="btn-bi" *ngIf="isLogged"  onclick="est1(); return false;">
+                Nuevo estudio
+            </button> 
+
+
+        <div class="containerColumn">
+            <div id="est1" style="float: right; margin: 60px -110px 0 0; display: none;" >
+
+                <div class="row">
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            
+                            <label for="nombreE">Titulo del estudio</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="nombreE" [(ngModel)]="nombreE" required>
+                            </div>
+                                <label for="descripcionE">Descripcion del estudio</label>
+                            <div class="form-group">
+                                <textarea cols="161" rows="10" type="text" class="form-control tam" name="descripcionE" [(ngModel)]="descripcionE" required></textarea>
+                            </div>
+                            
+                            <button class="btn-bi" style="margin-right: -20px;" onclick="location.reload()">
+                                Agregar Estudio
+                            </button>
+                        </form>
+                </div>
+            </div>
+        </div>
+
+        
+            <h3>Estudios</h3>
+        <hr>
+            <div  id="est">
+                <div *ngFor=" let Conocimiento of conocimiento">
+                    <div *ngIf="isLogged">
+                        <div style="float: right; margin: 20px;">
+                            <button  class="btn-bi" routerLink="editcono/{{Conocimiento.id}}">
+                                <i class="bi bi-pencil-fill"></i> 
+                            </button>
+                        
+                            <button  class="btn-bi" (click)="delete(Conocimiento.id)">
+                                <i class=" bi bi-x"  ></i>
+                            </button>
+                        </div>                                
+                    </div>
+                    <div>
+                        <hr>
+                        <h2>
+                            {{Conocimiento.nombreE}}
+                        </h2>
+                        <p>
+                            {{Conocimiento.descripcionE}}
+                        </p>
+                        <hr>
+
+                    </div>
+                </div>
+            </div> 
+        <hr>
+
+    </div>
+</div>

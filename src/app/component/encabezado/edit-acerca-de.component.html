@@ -1,0 +1,45 @@
+<!--
+
+<div class="container" *ngIf="persona">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+                <label for="nombre">Nombre</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+                </div>
+                
+                <label for="apellido">Apellido</label>
+                <div class="form-group">
+                    <textarea cols="161"  type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required></textarea>
+                </div>
+                <label for="sobreTi">Sobre ti</label>
+            <div class="form-group">
+                <textarea cols="161"  type="text" class="form-control" id="sobreTi" name="sobreTi" [(ngModel)]="persona.sobreTi" required></textarea>
+            </div>
+
+
+
+            <label for="img">Imagen</label>
+        <div class="form-group">
+            <input cols="161"  type="file" class="form-control" id="img" name="img" [(ngModel)]="persona.img" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+        </div>
+
+            <label for="imgU">Imagen usuario</label>
+        <div class="form-group">
+            <input cols="161"  type="file" class="form-control" id="imgU" name="imgU" [(ngModel)]="persona.imgU" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png">
+        </div>
+                
+                <button class="btn-bi">
+                    Actualizar
+                </button>
+                <button  class="btn-bi" style="float: left;" heref="#ac">
+                    <i class="bi bi-arrow-left"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+-->

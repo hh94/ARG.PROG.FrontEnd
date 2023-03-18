@@ -1,0 +1,67 @@
+
+  /*-------------------------------------------------------------------------------Top-End-------------------------------------------------------------------------------------*/
+
+  .btn-mov{
+    position: fixed;
+    z-index: 2;
+    cursor: pointer;
+    box-shadow: var(--btn-box-shadow-color);
+    padding: 10px;
+    border-radius: 3px;
+    background-color: var(--btn-background-color);
+    color: var(--text-color);
+  }
+  
+  .contenedorTB{
+    margin:  0% 3% 1% 8%;
+    font-size: 20px;
+}
+
+.btn-bi:hover, .btn-mov:hover {
+  background-color: rgba(0, 0, 0, 0.174);
+  box-shadow:  var(--btn-box-shadow-color);
+}
+
+.btn-bi:active, .btn-mov:active {
+  color: var(--colum-container-background-color);
+  transform: translateY(4px);
+}
+
+  /*------------------------------------------------------------------------contenido-------------------------------------------------------------------------*/
+
+.item2{
+  padding: 15px;
+}
+.containerColumn {
+  display: grid;
+  grid-template-columns: 100%;
+  background-color: var(background-color);
+  margin: 0% 4% 0% 2%;
+  color: var(--text-color);
+}
+
+.containerColumn> div{
+  background-color: var(--colum-container-background-color);
+  border-radius: 3px;
+}
+
+img{
+  width: 70px;
+  height: 70px;
+  float: left;
+  margin-right: 10px;
+}
+
+dt>p{
+  font-size: 20px;
+}
+dt>h2,p{
+ text-align: left;
+}
+
+
+#exp{
+  margin: 0 0 0 50px ;
+}  #exp1{
+  margin: 200px 0 0 ;
+}

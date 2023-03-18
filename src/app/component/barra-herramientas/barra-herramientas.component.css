@@ -1,0 +1,342 @@
+
+/*---------------------------------------------------------------barra herramientas------------------------------------------------------------------------------------------*/
+.icon-bar {
+    width: 100%;
+    overflow: hidden;
+    align-content: center;
+    position: sticky;
+    top: 0px;
+    z-index: 3; /* Sit on top */
+    box-shadow: var(--btn-box-shadow-color);
+    background-color: var(--btn-background-color);
+  }
+  
+  .icon-bar a {
+    color: var(--text-color);
+    float: left;
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    padding: 8px;
+    text-decoration: none; /*para sacar subrayado y otras decoraciones del <a>*/
+    box-shadow: var(--btn-box-shadow-color);
+    border-radius: 2px;
+    background-color: var(--btn-background-color);
+  }
+  
+  .icon-bar a:hover {
+    background-color: rgba(0, 0, 0, 0.174);
+    box-shadow:  var(--btn-box-shadow-color);
+  }
+
+  .icon-bar a:active {
+    color: var(--colum-container-background-color);
+    transform: translateY(4px);
+  }
+  
+  /*--------------------------------------------------------logo inicio-----------------------------------------------------------------------------------------------*/
+ .inicio{
+    width: 35px;
+    height: 35px;
+    border-radius: 30cm;
+  }
+
+  /*----boton registro e inicio----*/
+  .RI{
+    float: right;
+    text-align: center;
+    margin-right: 5px;
+  }
+
+
+/*--------------------------------------------------------------------------------modal------------------------------------------------------------------------------------------*/
+
+/* el asterico es como un comodin*/
+* { 
+  box-sizing: border-box; /*hace q en el modal de ingresar quede en un box*/
+} 
+/*---- Full-width input fields ----*/
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /*---- Set a style for all buttons ----*/
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  button:hover {
+    opacity: 0.5;
+  }
+  
+  /*---- Extra styles for the cancel button ----*/
+  .cancelbtn {
+    background-color:  #f44336;
+  }
+  
+  /*---- Center the image and position the close button ----*/
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+  img.avatar {
+    width: 20%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    margin: 20px;
+    padding: 16px;
+    box-shadow: var(--container-box-shadow-color);
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /*---- The Modal (background) -----*/
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /*---- Modal Content/Box ----*/
+  .modal-content {
+    background-color: var(--modal-background-color);
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 70%; /* Could be more or less, depending on screen size */
+    border-radius: 3px;
+    color: var(--text-color);
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+.signupbtn {
+  width: 50%;
+  min-width: 100px;
+}
+
+  /*---- The Close Button (x) ----*/
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+
+  /*---- Clear floats --- coloca ----*/
+.clearfix::after {
+  content: "";
+  clear: both; /*Es una palabra clave que indica que el elemento se mueve hacia abajo para borrar los flotantes izquierdo y derecho.*/
+  display: table; /*pone como tabla*/
+}
+  
+  /*---- Add Zoom Animation ----*/
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /*---- Change styles for span and cancel button on extra small screens ----------*/
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+
+  /* --------------------------------style inputs y label de recordar checkbox para qeu el texto quede al lado del checkbox----------------------------------------------------- */
+
+label {
+  display: block;
+  padding-left: 15px;
+  text-indent: -15px;
+}
+
+label>input {
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  margin:0;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+  overflow: hidden;
+}
+
+/* ----------------------------------------------------------------------style inputs and link buttons----------------------------------------------------- */
+
+/* style the container */
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: var(--container-background-color);
+  padding: 20px 0 30px 0;
+} 
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin: 10px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+  background-color: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
+}
+
+.google {
+  background-color: #dd4b39;
+  color: white;
+}
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--modal-background-color);
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: var(--container-background-color);
+  text-align: center;
+}
+
+/*---------------------------borrar boton-------------------------*/
+label>button{
+  background-color: rgb(91, 91, 91);
+  width: 100px;
+  float: right;
+}

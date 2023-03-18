@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <!--es un conjunto de caracteres universal que incluye casi todos los caracteres de casi cualquier idioma humano.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+
+    
+<body>
+  <app-root></app-root>
+
+
+  <script>
+  
+//-------------------------------------------------------js-------------------------------------------->
+  // cierra cuando clikea fuera de la ventana
+  window.addEventListener("click", function(event) {
+  // Get the modal
+  var modal = document.getElementById('id01');
+  var modal2 = document.getElementById('id02');
+      if (event.target == modal || event.target == modal2) {
+          modal.style.display = "none";
+          modal2.style.display = "none";
+      }
+
+  })
+
+//--------------------------------------------------password-------------------------------------------------
+    function myFunction() {
+      var x = document.getElementById("password");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+
+    function myFunction1() {
+      var x = document.getElementById("myInput1");
+      var x2 = document.getElementById("myInput2");
+      if (x.type === "password") {
+        x.type = "text";
+        x2.type = "text";
+      } else {
+        x.type = "password";
+        x2.type = "password";
+      }
+    }
+
+//------------------------------------------------limpiar-----------------------------------------------
+  function limpiarFormulario() {
+    document.getElementById("miForm").reset();
+    document.getElementById("miForm1").reset();
+  }    
+
+//----------------------------------------------hide---------------------------------------------------
+
+function pro() {
+  var x = document.getElementById("pro");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}function pro1() {
+  var x = document.getElementById("pro1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}function FavId() {
+  boton_add = document.getElementById("add");
+  boton_add.style.display = "none";
+  
+  boton_remove = document.getElementById("remove");
+  boton_remove.style.display = "block";
+}function Removefav() {
+  boton_remove = document.getElementById("remove");
+  boton_remove.style.display = "none";
+ 
+  boton_add = document.getElementById("add");
+  boton_add.style.display = "block";
+}
+
+
+function hys() {
+  var x = document.getElementById("hys");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}function hys1() {
+  var x = document.getElementById("hys1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}function FavId1() {
+  boton_add = document.getElementById("add1");
+  boton_add.style.display = "none";
+  
+  boton_remove = document.getElementById("remove1");
+  boton_remove.style.display = "block";
+}function Removefav1() {
+  boton_remove = document.getElementById("remove1");
+  boton_remove.style.display = "none";
+ 
+  boton_add = document.getElementById("add1");
+  boton_add.style.display = "block";
+}
+
+
+function est() {
+  var x = document.getElementById("est");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}function est1() {
+  var x = document.getElementById("est1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}function FavId2() {
+  boton_add = document.getElementById("add2");
+  boton_add.style.display = "none";
+  
+  boton_remove = document.getElementById("remove2");
+  boton_remove.style.display = "block";
+}function Removefav2() {
+  boton_remove = document.getElementById("remove2");
+  boton_remove.style.display = "none";
+ 
+  boton_add = document.getElementById("add2");
+  boton_add.style.display = "block";
+}
+
+
+function exp() {
+  var x = document.getElementById("exp");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}function exp1() {
+  var x = document.getElementById("exp1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}function FavId3() {
+  boton_add = document.getElementById("add3");
+  boton_add.style.display = "none";
+  
+  boton_remove = document.getElementById("remove3");
+  boton_remove.style.display = "block";
+}function Removefav3() {
+  boton_remove = document.getElementById("remove3");
+  boton_remove.style.display = "none";
+ 
+  boton_add = document.getElementById("add3");
+  boton_add.style.display = "block";
+}
+
+
+</script>
+
+
+</body>
+
+</html>

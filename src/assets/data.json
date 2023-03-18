@@ -1,0 +1,63 @@
+{
+    "logo": "../assets/img/logo.jpeg",
+    "logocurso": "../assets/img/logocurso.jpg",
+    "usuario": "../assets/img/usuario.png",
+
+    "nombre": "Hiromi Marina",
+    "apellido": "Higa",
+    "profesion": "Desarrollador Full Stack",
+    "acerca": "Soy una persona en busca desafios para seguir avanzando y tener la oportunidad para desarrollarme en una empresa. Lo que mas me gusta del area es poder solucionar de la mejor manera los problemas que se presenten. ",
+
+            "m": " Lorem@gmail.com",
+            "w": " 011-Lorem(56736)-000",
+
+    "certificados": [
+        {
+            "titulo": "Se Programar -Argentina Programa-",
+            "fecha": "13 de Abril del 2022",
+            "certificado": "",
+            "imgLogo": "https://www.nono.gob.ar/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-07-at-6.21.25-PM-2048x1024.jpeg"
+        },
+        {
+            "titulo": "Yo Programo -Argentina Programa-",
+            "fecha": "Actual",
+            "certificado": "",
+            "imgLogo": "https://www.nono.gob.ar/wp-content/uploads/2021/09/WhatsApp-Image-2021-09-07-at-6.21.25-PM-2048x1024.jpeg"
+        }
+    ],
+
+    "habilidadesConocimientos": [
+        
+        {
+            "otro":"Lenguaje de programacion:",
+            "tipo": " HTML, CSS, JAVASCRIPT, ANGULAR"
+
+        },
+        {
+            "otro":"Idiomas:",
+            "tipo": " Español, Ingles, Japones"
+
+        }
+    ],
+
+    "proyectos": [
+        {
+            "nombre": "Portafolio",
+            "url": "www"
+        }
+    ],
+
+    "futurosProyectos": [
+        {
+            "nombre": "Juegos Simples"
+        },
+        {
+            "nombre": "Paginas webs/apps de compras"
+        },
+        {
+            "nombre": "Programas"
+        }
+    ]
+
+
+}

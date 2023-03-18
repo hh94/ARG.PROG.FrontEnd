@@ -1,0 +1,80 @@
+
+<div class="containerColumn">
+    <div class="item2">
+
+        <a href="" onclick="hys(); return false;">
+            <i class="bi bi-eye-fill btn-bi" id="add1" onclick="FavId1()"></i>
+        </a>
+        <a href="" onclick="hys(); return false;">
+            <i  class="bi bi-eye-slash btn-bi" id="remove1" onclick="Removefav1()"></i>
+        </a>
+
+        <div>
+            <button type="button" class="btn btn-dark" *ngIf="isLogged"  class="btn-bi"  onclick="hys1(); return false;">Nueva Skill</button>
+        </div>
+
+        
+        <div id="hys1" style="float: right; margin: 60px -110px 0 0; display: none;" >
+                <div class="row">
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                            <div class="form-group">
+                                <label for="nombre">Nueva Skill</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+                            </div> <br>
+                            <div class="form-group">
+                                <label for="porcentaje">Porcentaje</label> 
+                                <textarea type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required></textarea>
+                            </div>
+                            <button class="btn-bi" onclick="location.reload();">
+                                Agregar skill
+                            </button>
+                        </form>
+                </div>
+        </div>
+
+
+
+
+        <div class="row">
+
+            <h3>Hard & Soft skills</h3>
+            <hr>   
+            <div  id="hys">
+                <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
+                    <circle-progress
+                        [percent]="(skill.porcentaje)"
+                        [radius]="90" [imageSrc]="''" 
+                        [title]="(skill.nombre)"
+                        [titleColor]="' var(--text-color)'"
+                        [showTitle]="true" 
+                        [showImage]="false" 
+                        [imageHeight]="70" 
+                        [imageWidth]="70" 
+                        [showUnits]="false"
+                        [showSubtitle]="false" 
+                        [outerStrokeWidth]="16" 
+                        [innerStrokeWidth]="2" 
+                        [outerStrokeColor]="'#78C000'"
+                        [innerStrokeColor]="'#C7E596'" 
+                        [animation]="true" 
+                        [animationDuration]="600" >
+                    </circle-progress>
+
+
+                    <div style="float: right;">
+                        <td *ngIf="isLogged">
+
+                            <button class="btn-bi" routerLink="editskill/{{skill.id}}">
+                                <i class="bi bi-pencil-fill"></i>
+                            </button>
+
+                            <button class="btn-bi"   (click)="delete(skill.id)">
+                                <i class="bi bi-x"></i>
+                            </button>
+                        </td>
+                    </div>
+                </div>                 
+        </div>
+
+    </div>    <hr>   
+</div>    

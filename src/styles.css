@@ -1,0 +1,91 @@
+body{
+    background-color: rgb(213, 213, 213);
+    font-family: 'Open Sans', sans-serif;
+
+    /*barra herramientas*/
+    --text-color: rgb(0, 0, 0);
+    --icon-bar-background-color: rgba(216, 216, 216, 0.796);
+    --icon-bar-box-shadow-color: 5px 5px 10px 5px rgba(0, 0, 0, 0.319);
+
+    /* botones generales*/
+    --btn-background-color: rgba(255, 255, 255, 0.649);
+    --btn-box-shadow-color: 0px 5px 7px 3px rgba(0, 0, 0, 0.336);
+    
+    /*barra herramientas modal*/
+    --modal-background-color: #fefefe;
+    --container-background-color: #f2f2f2;
+    --container-box-shadow-color: 0px 5px 7px 3px rgba(0, 0, 0, 0.336);
+
+    
+    /*body */
+    --colum-container-background-color: #f1f1f1;
+    
+    /*footer*/
+    --footer-background: rgb(199, 199, 199);
+
+    
+}
+
+body.dark-theme{
+    background-color: rgb(44, 44, 44);
+    
+    /*barra herramientas*/
+    --text-color: rgb(214, 214, 214);
+    --icon-bar-background-color: rgba(49, 49, 49, 0.796);
+    --icon-bar-box-shadow-color:  0px 5px 7px 3px rgba(255, 255, 255, 0.389);
+
+     /* botones generales*/
+    --btn-background-color: rgba(95, 95, 95, 0.511);
+    --btn-box-shadow-color: 0 0 15px rgba(255, 255, 255, 0.741);
+    
+    /*barra herramientas modal*/
+    --modal-background-color: #4b4b4b;
+    --container-background-color: #2e2e2e;
+    --container-box-shadow-color: 0px 5px 7px 3px rgba(255, 255, 255, 0.199);
+
+    /*body */
+    --colum-container-background-color: #3e3e3e;
+
+    /*footer*/
+    --footer-background: rgb(48, 48, 48);
+}
+
+
+html{
+    scroll-behavior: smooth;
+  }
+
+
+  /*-----------------------hide*/
+.btn-bi{
+    cursor: pointer;
+    box-shadow: var(--btn-box-shadow-color);
+    border-radius: 3px;
+    background-color: var(--btn-background-color);
+    color: var(--text-color);
+    border-color: rgba(0, 0, 0, 0);
+    float: right;
+    padding: 10px;
+    margin: 10px;
+    
+  }
+  .btn-bi:hover, .btn-mov:hover {
+    background-color: rgba(0, 0, 0, 0.174);
+    box-shadow:  var(--btn-box-shadow-color);
+  }
+  .btn-bi:active, .btn-mov:active {
+    color: var(--colum-container-background-color);
+    transform: translateY(4px);
+  }
+
+
+  #contenedor{
+    display: inline-block;
+    min-width: 50px;
+    margin: 000 5%;
+  }
+
+
+  #remove, #remove1, #remove2, #remove3{
+    display: none;
+  }

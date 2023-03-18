@@ -1,0 +1,52 @@
+
+ 
+ /*-------------------------------------------------------------------imagenes encabezado y usuario-------------------------------------------------------------------------*/
+ .item2{
+  color: var(--text-color);
+ }
+
+
+ .contenedorE{
+  background-color: var(--colum-container-background-color);
+  margin: 0% 4% 0% 2%;
+  border-radius: 8px 8px 0 0;
+}
+ img {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .encabezado {
+    width: 100%;
+    height: 50%;
+    border-radius: 8px 8px 0 0;
+  }
+  .usuario {
+    width: 250px;
+    height: 250px;
+    /*img redonda*/
+    border-radius: 50%;  
+    z-index: 2;
+    margin: -7% 8% 2% 3%; 
+  }
+  .logo {
+      width: 30px;
+      height: 30px;
+      border-radius: 0px;
+      margin-top: 10px;
+      margin-left: -25px;
+    }
+    .item2{
+      margin-right: 5px;
+      margin-bottom: 15px;
+      margin-top: -200px;
+      margin-left: 300px;
+    }
+
+    /*-----------------------hide*/
+.btn-bi{
+  padding: 10px;
+  margin-top: -40px;
+  
+}

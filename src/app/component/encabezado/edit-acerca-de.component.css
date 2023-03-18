@@ -1,0 +1,27 @@
+.container{
+  background-color: var(--colum-container-background-color) ;
+  margin: 30px;
+  padding: 80px;
+}
+.form-group{
+  margin: 20px;
+}
+label, input, textarea, .btn-bi{
+  color: var(--text-color);
+}
+label{
+  font-size: 25px;
+}
+input{
+  font-size: 25px;
+  width: 1200px;
+  height: 50px;
+}
+.tam{
+  height: 300px;
+
+}
+textarea{
+  font-size: 30px;
+  width: 1200px;
+}

@@ -1,0 +1,161 @@
+<!----------contenido portafolio--------------------------------------------------------------------------------->
+<div class="contenedorTB">
+
+    <!-------------------------------------------top-bottom------------------------------------------>
+
+        <div style="float: right;">
+            <a href="#end" class="btn-mov" style="bottom: 80px;">
+                <i class="bi bi-arrow-bar-down"></i>
+            </a>
+            <a href="#top" class="btn-mov" style="bottom: 150px;">
+                <i class="bi bi-arrow-bar-up"></i>
+            </a>
+        </div>
+
+</div>
+
+<div class="containerColumn">
+
+    <div class="item2">
+        
+            <a href="" onclick="exp(); return false;">
+                <i class="bi bi-eye-fill btn-bi" id="add3" onclick="FavId3()"></i>
+            </a>
+            <a href="" onclick="exp(); return false;">
+                <i  class="bi bi-eye-slash btn-bi" id="remove3" onclick="Removefav3()"></i>
+            </a>
+
+            <button style="margin-right: 20px;" class="btn-bi" onclick="exp1(); return false;" *ngIf="isLogged">
+                Nueva Experiencia
+            </button> 
+
+            
+        <div class="containerColumn">
+            <div id="exp1" style="float: right; margin: 60px -110px 0 0; display: none;" >
+                <div class="row">
+                    
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            
+                            <label for="nombreE">Nombre de la experiencia</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="nombreE" [(ngModel)]="nombreE" required>
+                            </div>
+                                <label for="descripcionE">Descripcion de la experiencia</label>
+                            <div class="form-group">
+                                <textarea cols="155" rows="10" type="text" class="form-control tam" name="descripcionE" [(ngModel)]="descripcionE" required></textarea>
+                            </div>
+                            <button class="btn-bi" style="margin-right: -50px;" onclick="location.reload();">
+                                Agregar experiencia
+                            </button>
+                        </form>
+                        
+                </div>
+            </div>
+        </div>
+            
+        
+            <h3>Experiencia</h3>
+        <hr>
+            <div id="exp">
+                <div *ngFor=" let Experiencia of expe">
+                    <div *ngIf="isLogged">
+                        <div style="float: right; margin: 20px;">
+                            <button class="btn-bi" routerLink="editexp/{{Experiencia.id}}">
+                                <i class="bi bi-pencil-fill"></i>
+                            </button>
+                            
+                            <button  class="btn-bi" (click)="delete(Experiencia.id)" >
+                                <i class="bi bi-x" ></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <hr>
+                        <h2>
+                            {{Experiencia.nombreE}}
+                        </h2>
+                        <p>
+                            {{Experiencia.descripcionE}}
+                        </p>
+                        <hr>
+                    </div>
+
+                </div>
+            </div> 
+            <hr>
+
+    </div>
+                            
+
+
+
+
+<!--
+        <div> <a href="" onclick="hide(); return false;"><i class="bi bi-plus btn-bi"></i></a>
+            <h3>Certificados</h3> 
+            <div id="hide">
+                <dl *ngFor=" let certificados of certificadoList">
+                        
+                    <img [src]="certificados.imgLogo" alt="">
+                    
+                    <dt>
+                        <p>{{certificados.titulo}}</p>
+                    </dt>
+                    <dt>
+                        {{certificados.fecha}}
+                    </dt>
+                    <dt>
+                        {{certificados.certificado}}
+                    </dt>
+                </dl>
+            </div> 
+
+        </div>
+<hr>
+        
+        <div> <a href="" onclick="hide1(); return false;"><i class="bi bi-plus btn-bi"></i></a>
+            <h3>Habilidades y conocimientos</h3>
+            <div  id="hide1">
+                <dl *ngFor=" let habilidadesConocimientos of habilidadesConocimientosList">
+                    <dt>
+                        <p>{{habilidadesConocimientos.otro}}</p>
+                        {{habilidadesConocimientos.tipo}}
+                    </dt>
+                </dl>
+            </div>   
+        </div>
+<hr>
+
+        
+        <div> <a href="" onclick="hide2(); return false;"><i class="bi bi-plus btn-bi"></i></a>
+            <h3>Proyectos</h3>
+            <div  id="hide2">
+                <dl *ngFor=" let proyectos of proyectosList">
+                    <dt>
+                        <p>{{proyectos.nombre}}</p>
+                        {{proyectos.url}}
+                    </dt>
+                </dl>
+            </div>  
+        </div>
+
+<hr>
+        
+        <div> <a href="" onclick="hide3(); return false;"><i class="bi bi-plus btn-bi"></i></a>
+            <h3>Futuros proyectos</h3>
+            <div id="hide3">
+                <dl *ngFor=" let futurosProyectos of futurosProyectosList">
+                    <dt>
+                        <p>{{futurosProyectos.nombre}}</p>
+                    </dt>
+                </dl>
+            </div>
+        </div>
+
+<hr>
+    </div>
+-->
+
+</div>    
+
