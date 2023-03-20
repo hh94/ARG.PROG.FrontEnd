@@ -13,7 +13,7 @@ import { TokenService } from 'src/app/service/token.service';
 
 export class EncabezadoComponent implements OnInit {
 
-  persona: persona = new persona("","","","","","");
+  persona: persona = new persona("","","");
   
   constructor(public personaService: PersonaService) { }
 
