@@ -18,6 +18,7 @@ export class ExperienciaComponent implements OnInit {
   nombreE: string = '';
   descripcionE: string = '';
 
+    
   constructor( 
               private sExperiencia: SExperienciaService, 
               private tokenService: TokenService,
@@ -36,12 +37,11 @@ export class ExperienciaComponent implements OnInit {
 
   }
 
-
   onCreate(): void {
     const expe = new Experiencia(this.nombreE, this.descripcionE);
     this.sExperiencia.save(expe).subscribe(
       data => {
-        alert("añadida");
+        alert("Experiencia añadida");
         this.router.navigate(['']);
       }, err => {
         alert("Falló");
@@ -49,6 +49,7 @@ export class ExperienciaComponent implements OnInit {
       }
     )
   }
+
 
   cargarExperiencia(): void {
     this.sExperiencia.lista().subscribe(data => { this.expe = data; })
@@ -65,4 +66,6 @@ export class ExperienciaComponent implements OnInit {
       )
     }
   }
+
+  
 }

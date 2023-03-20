@@ -1,7 +1,6 @@
 
 import { Injectable } from '@angular/core';
 
-
 const TOKEN_KEY = 'AuthToken';
 const USERNAME_KEY = 'AuthUsername';
 const AUTHORITIES_KEY = 'AuthAuthorities';
@@ -15,6 +14,7 @@ export class TokenService {
   roles: Array<string>  = [];
 
   constructor() { }
+  
 //por si acaso borra el token de antes y copia el token nuevo 
 public setToken(token: string): void {
   window.sessionStorage.removeItem(TOKEN_KEY);

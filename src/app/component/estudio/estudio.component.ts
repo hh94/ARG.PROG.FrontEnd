@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Estudio } from 'src/app/model/estudio';
-import { ConocimientoService } from 'src/app/service/estudio.service';
+import { EstudioService } from 'src/app/service/estudio.service';
 import { TokenService } from 'src/app/service/token.service';
 
 @Component({
@@ -11,22 +11,22 @@ import { TokenService } from 'src/app/service/token.service';
 })
 
 
-export class EstudioComponent implements OnInit {
+export class EstudioComponent implements OnInit{
 
-  conocimiento: Estudio[] = [];
+  est: Estudio[] = [];
 
-  nombreE: string = '';
-  descripcionE: string = '';
+  nombreS: string = '';
+  descripcionS: string = '';
 
   constructor( 
-              private sConocimiento: ConocimientoService, 
+              private sEstudio: EstudioService, 
               private router: Router,  
               private tokenService: TokenService) { }
 
   isLogged = false;
 
   ngOnInit(): void{
-    this.cargaConocimiento();
+    this.cargaEstudio();
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
@@ -36,8 +36,8 @@ export class EstudioComponent implements OnInit {
   }
 
   onCreate(): void {
-    const expe = new Estudio(this.nombreE, this.descripcionE);
-    this.sConocimiento.save(expe).subscribe(
+    const est = new Estudio(this.nombreS, this.descripcionS);
+    this.sEstudio.save(est).subscribe(
       data => {
         alert("añadida");
         this.router.navigate(['']);
@@ -48,19 +48,20 @@ export class EstudioComponent implements OnInit {
     )
   }
 
-  cargaConocimiento(): void {
-    this.sConocimiento.lista().subscribe(data => { this.conocimiento = data; })
+  cargaEstudio(): void {
+    this.sEstudio.lista().subscribe(data => { this.est = data; })
   }
 
   delete(id?: number){
     if(id != undefined){
-      this.sConocimiento.delete(id).subscribe(
+      this.sEstudio.delete(id).subscribe(
         data => {
-          this.cargaConocimiento();
+          this.cargaEstudio();
         }, err => {
           alert("No se pudo borrar");
         }
       )
     }
   }
+  
 }

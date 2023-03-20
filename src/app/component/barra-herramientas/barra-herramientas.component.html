@@ -26,36 +26,44 @@
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             <img src="../assets/img/usuario.png" alt="Avatar" class="avatar">
         </div>
+
+
         <div class="container">
-            <div class="row">
-                <h2 style="text-align:center">Ingresar con red social o manualmente</h2>
-                <div class="vl">
-                <span class="vl-innertext">o</span>
-                </div>
+            <div class="row" style="margin: 70px;">
         
-                <div class="col">
-                    <a href="#" class="fb btn">
-                        <i class="fa fa-facebook fa-fw"></i> Ingresar con Facebook
-                    </a>
-                    <a href="#" class="twitter btn">
-                        <i class="fa fa-twitter fa-fw"></i> Ingresar con Twitter
-                    </a>
-                    <a href="#" class="google btn"><i class="fa fa-google fa-fw">
-                        </i> Ingresar con Google+
-                    </a>
-                </div>
-        
-                <div class="col">
-                    <div class="hide-md-lg">
-                        <p>O manualmente:</p>
-                    </div>
+                        <!----------modal login--------------------------------------------------------------
+                    <div class="container">
+                        <div class="row">
+                            <h2 style="text-align:center">Ingresar con red social o manualmente</h2>
+                            <div class="vl">
+                            <span class="vl-innertext">o</span>
+                            </div>
+                    
+                            <div class="col">
+                                <a href="#" class="fb btn">
+                                    <i class="fa fa-facebook fa-fw"></i> Ingresar con Facebook
+                                </a>
+                                <a href="#" class="twitter btn">
+                                    <i class="fa fa-twitter fa-fw"></i> Ingresar con Twitter
+                                </a>
+                                <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+                                    </i> Ingresar con Google+
+                                </a>
+                            </div>
+                    -------------------><!-----
+                            <div class="col">
+                                
+                                <div class="hide-md-lg">
+                                    <p>O manualmente:</p>
+                                </div>-------->
 
 
                     <form id="miForm" action="action_page.php"  #f="ngForm" (ngSubmit)="onLogin()" novalidate>
-
                         <div>
+                            <span>Nombre de Usuario</span>
                             <input type="email"  placeholder="Usuario" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required>
                      
+                            <span>Contraseña</span>
                             <input type="password"  placeholder="Contraseña" [(ngModel)]="password" name="password" required id="password">
                         </div>
                         
@@ -63,10 +71,7 @@
                             <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn signupbtn">Cancelar</button>
 
                             <button type="submit" onclick="document.getElementById('id01').style.display='none'" class="signupbtn">Ingresar</button>
-                                
-                            
                         </div>
-
                     </form>
 
                     
@@ -78,15 +83,12 @@
                         <input type="checkbox" name="remember" onclick="myFunction()"> Mostrar contraseña
                         <input type="checkbox" checked="checked" name="remember"> Recuerdame
                     </label>
-                </div>
                 
             </div>
+ <!------
+            <p class="signin"  onclick="document.getElementById('id01').style.display='none'">No tiene cuenta? <a href="#" onclick="document.getElementById('id02').style.display='block';  return false;">Registrarse</a>.</p>---->
 
-            
-            <p class="signin"  onclick="document.getElementById('id01').style.display='none'">No tiene cuenta? <a href="#" onclick="document.getElementById('id02').style.display='block';  return false;">Registrarse</a>.</p>
         </div>
     </form>
 </div>
-
-
 

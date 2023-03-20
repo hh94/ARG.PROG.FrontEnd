@@ -1,16 +1,18 @@
-<div class="container" *ngIf="conocimiento">
+
+
+<div class="container" *ngIf="study">
     <div class="row">
         <div>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
 
                 <label for="nombreE">Titulo del estudio</label>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="conocimiento.nombreE" required>
+                    <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="study.nombreS" required>
                 </div>
                 
                     <label for="descripcionE">Descripcion del estudio</label>
                 <div class="form-group">
-                    <textarea cols="161"  type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="conocimiento.descripcionE" required></textarea>
+                    <textarea cols="155" rows="10"  type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="study.descripcionS" required></textarea>
 
                 </div>
                 

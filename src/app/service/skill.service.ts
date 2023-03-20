@@ -1,5 +1,4 @@
 import { HttpClient } from '@angular/common/http';
-import { identifierName } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -10,7 +9,7 @@ import { Skill } from '../model/skill';
 })
 export class SkillService {
   
-  URL = environment.URL + '/skill/';
+  URL = environment.URL + '/hys/';
   
   constructor(private httpClient: HttpClient) { }
 
@@ -33,6 +32,7 @@ export class SkillService {
   public delete(id: number): Observable<any>{
     return this.httpClient.delete(this.URL + `delete/${id}`);
   }
+
 }
 
 

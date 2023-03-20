@@ -1,15 +1,12 @@
 import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BarraHerramientasComponent } from './component/barra-herramientas/barra-herramientas.component';
 import { PieComponent } from './component/pie/pie.component';
 
 import { HttpClientModule} from '@angular/common/http';
-
 import { HomeComponent } from './component/home/home.component';
-
 
 import { FormsModule } from '@angular/forms';
 import { interceptorProvider } from './service/interceptor-service';
@@ -21,12 +18,14 @@ import { EditEstudioComponent } from './component/estudio/edit-estudio.component
 import { EditSkillComponent } from './component/hys/edit-skill.component';
 import { HysComponent } from './component/hys/hys.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 // Import ng-circle-progress
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { EncabezadoComponent } from './component/encabezado/encabezado.component';
 import { ExperienciaComponent } from './component/Experiencia/experiencia.component';
 
-
+import { EditAcercaDeComponent } from './component/encabezado/edit-acerca-de.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +41,8 @@ import { ExperienciaComponent } from './component/Experiencia/experiencia.compon
     EstudioComponent,
     EditEstudioComponent,
     EditSkillComponent,
-    HysComponent
+    HysComponent,
+    EditAcercaDeComponent
     
   ],
   imports: [
@@ -50,6 +50,8 @@ import { ExperienciaComponent } from './component/Experiencia/experiencia.compon
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
+    
 
 
        // Specify ng-circle-progress as an import
@@ -61,12 +63,13 @@ import { ExperienciaComponent } from './component/Experiencia/experiencia.compon
         outerStrokeColor: "#78C000",
         innerStrokeColor: "#C7E596",
         animationDuration: 300,
-        }),
+        })
  //        provideFirebaseApp(() => initializeApp(environment.firebase)),
   //       provideStorage(() => getStorage())
       
 
   ],
+
   providers: [
     interceptorProvider
   ],

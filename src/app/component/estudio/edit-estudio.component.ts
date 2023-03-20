@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Estudio } from 'src/app/model/estudio';
-import { ConocimientoService } from 'src/app/service/estudio.service';
+import { EstudioService } from 'src/app/service/estudio.service';
 
 @Component({
   selector: 'app-edit-estudio',
@@ -9,19 +9,19 @@ import { ConocimientoService } from 'src/app/service/estudio.service';
   styleUrls: ['./edit-estudio.component.css']
 })
 
-export class EditEstudioComponent implements OnInit {
-
+export class EditEstudioComponent implements OnInit{
   
-  conocimiento : Estudio = null;
+  study : Estudio = null;
 
-  constructor(private sConocimiento: ConocimientoService , private activatedRouter: ActivatedRoute,
-    private router: Router) { }
+  constructor(private sEstudio: EstudioService , 
+              private activatedRouter: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.sConocimiento.detail(id).subscribe(
+    this.sEstudio.detail(id).subscribe(
       data =>{
-        this.conocimiento = data;
+        this.study = data;
       }, err =>{
         alert("Error al modificar");
         this.router.navigate(['']);
@@ -31,11 +31,11 @@ export class EditEstudioComponent implements OnInit {
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
-    this.sConocimiento.update(id, this.conocimiento).subscribe(
+    this.sEstudio.update(id, this.study).subscribe(
       data => {
         this.router.navigate(['']);
       }, err =>{
-         alert("Error al modificar experiencia");
+         alert("Error al modificar.");
          this.router.navigate(['']);
       }
     )

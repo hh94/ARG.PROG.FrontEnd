@@ -10,26 +10,27 @@
         </a>
 
         <div>
-            <button type="button" class="btn btn-dark" *ngIf="isLogged"  class="btn-bi"  onclick="hys1(); return false;">Nueva Skill</button>
+            <button type="button" class="btn btn-dark" *ngIf="isLogged"  class="btn-bi"  onclick="hys1(); return false;">Nueva habilidad</button>
         </div>
 
         
         <div id="hys1" style="float: right; margin: 60px -110px 0 0; display: none;" >
-                <div class="row">
-                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                            <div class="form-group">
-                                <label for="nombre">Nueva Skill</label>
-                                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
-                            </div> <br>
-                            <div class="form-group">
-                                <label for="porcentaje">Porcentaje</label> 
-                                <textarea type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required></textarea>
-                            </div>
-                            <button class="btn-bi" onclick="location.reload();">
-                                Agregar skill
-                            </button>
-                        </form>
-                </div>
+            <div class="row">
+                <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                        <label for="nombre">Nueva habilidad</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombreH" required>
+                    </div> 
+                    <br>
+                    <div class="form-group">
+                        <label for="porcentaje">Porcentaje</label> 
+                        <input style="margin-left: 38px;" type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentajeH" required>
+                    </div>
+                    <button class="btn-bi" onclick="location.reload();">
+                        Agregar habilidad
+                    </button>
+                </form>
+            </div>
         </div>
 
 
@@ -37,14 +38,14 @@
 
         <div class="row">
 
-            <h3>Hard & Soft skills</h3>
+            <h3>Habilidades</h3>
             <hr>   
             <div  id="hys">
                 <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
                     <circle-progress
-                        [percent]="(skill.porcentaje)"
+                        [percent]="(skill.porcentajeH)"
                         [radius]="90" [imageSrc]="''" 
-                        [title]="(skill.nombre)"
+                        [title]="(skill.nombreH)"
                         [titleColor]="' var(--text-color)'"
                         [showTitle]="true" 
                         [showImage]="false" 
@@ -76,5 +77,6 @@
                 </div>                 
         </div>
 
-    </div>    <hr>   
+    </div>    
+    <hr>   
 </div>    

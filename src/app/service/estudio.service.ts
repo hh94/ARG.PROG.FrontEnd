@@ -7,29 +7,29 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class ConocimientoService {
+export class EstudioService {
 
-  expURL =  environment.URL + '/conocimiento/';
+  URL =  environment.URL + '/estu/';
 
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Estudio[]>{
-    return this.httpClient.get<Estudio[]>(this.expURL + 'lista');
+    return this.httpClient.get<Estudio[]>(this.URL + 'lista');
   }
 
   public detail(id: number): Observable<Estudio>{
-    return this.httpClient.get<Estudio>(this.expURL + `detail/${id}`);
+    return this.httpClient.get<Estudio>(this.URL + `detail/${id}`);
   } 
 
-  public save(conocimiento: Estudio): Observable<any>{
-    return this.httpClient.post<any>(this.expURL + 'create', conocimiento);
+  public save(estudio: Estudio): Observable<any>{
+    return this.httpClient.post<any>(this.URL + 'create', estudio);
   }
 
-  public update(id: number, conocimiento: Estudio): Observable<any>{
-    return this.httpClient.put<any>(this.expURL + `update/${id}`, conocimiento);
+  public update(id: number, estudio: Estudio): Observable<any>{
+    return this.httpClient.put<any>(this.URL + `update/${id}`, estudio);
   }
 
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.expURL + `delete/${id}`);
+    return this.httpClient.delete<any>(this.URL + `delete/${id}`);
   }
 }

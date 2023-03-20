@@ -7,12 +7,22 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-
 export class PersonaService {
+  URL = environment.URL + 'personas/';
+
+  constructor(private http: HttpClient) { }
+
+  public getPersona(): Observable<persona>{
+    return this.http.get<persona>(this.URL+ 'traer/perfil');
+  }
+}
+  /*
   getPersona() {
     throw new Error('Method not implemented.');
   }
-  URL = environment.URL + '/personas/';
+  
+  
+  URL =  environment.URL + '/personas/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -35,8 +45,7 @@ export class PersonaService {
   public delete(id: number): Observable<any>{
     return this.httpClient.delete<any>(this.expURL + `delete/${id}`);
   }
+}
 
 }
 */
-
-}

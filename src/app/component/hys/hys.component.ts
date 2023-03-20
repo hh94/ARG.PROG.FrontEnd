@@ -16,8 +16,8 @@ export class HysComponent implements OnInit {
 
   skill: Skill[] = [];
 
-  nombre: string;
-  porcentaje: number;
+  nombreH: string;
+  porcentajeH: number;
 
   constructor(
               private skillS: SkillService, 
@@ -25,7 +25,6 @@ export class HysComponent implements OnInit {
               private router: Router)  {  }
 
   isLogged = false;
-  
   
   ngOnInit(): void {    
     this.cargarSkills();
@@ -37,15 +36,14 @@ export class HysComponent implements OnInit {
 
   }
 
-
   onCreate(): void{
-    const skill = new Skill(this.nombre, this.porcentaje);
+    const skill = new Skill(this.nombreH, this.porcentajeH);
     this.skillS.save(skill).subscribe(
       data => {
-        alert("Skill creada correctamente");
+        alert("Se creo correctamente");
         this.router.navigate(['']);
       }, err =>{
-        alert("Fallo al añadir la skill");
+        alert("Fallo al añadir");
         this.router.navigate(['']);
       }
     )
@@ -65,12 +63,11 @@ export class HysComponent implements OnInit {
         data => {
           this.cargarSkills();
         }, err => {
-          alert("No se pudo borrar la skill");
+          alert("No se pudo borrar");
         }
       )
     }
 
   }
-
 
 }

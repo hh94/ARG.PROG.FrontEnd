@@ -1,3 +1,4 @@
+
 <div class="container" *ngIf="proyect">
     <div class="row">
         <div>
@@ -5,12 +6,12 @@
 
                     <label for="nombreE">Nombre del proyecto</label>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="nombreE" [(ngModel)]="proyect.nombreE" required>
+                    <input type="text" class="form-control" name="nombreE" [(ngModel)]="proyect.nombreP" required>
                 </div>
                 
                     <label for="descripcionE">Descripcion del proyecto</label>
                 <div class="form-group">
-                    <textarea cols="161"  type="text" class="form-control" name="descripcionE" [(ngModel)]="proyect.descripcionE" required></textarea>
+                    <textarea cols="155" rows="10"  type="text" class="form-control" name="descripcionE" [(ngModel)]="proyect.descripcionP" required></textarea>
 
                 </div>
                 <button class="btn-bi">

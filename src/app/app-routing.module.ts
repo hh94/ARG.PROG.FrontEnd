@@ -15,6 +15,7 @@ import { EditAcercaDeComponent } from './component/encabezado/edit-acerca-de.com
 const router: Routes = [
   { path:'', component: HomeComponent},
   { path: 'login', component: BarraHerramientasComponent},
+
   { path: 'editexp/:id', component: EditExperienciaComponent},
   
   { path: 'editpro/:id', component: EditProyectoComponent},
@@ -24,8 +25,6 @@ const router: Routes = [
   { path: 'editskill/:id', component: EditSkillComponent},
   
   { path: 'edit/:id', component: EditAcercaDeComponent}
-
-
 
 ];
 
