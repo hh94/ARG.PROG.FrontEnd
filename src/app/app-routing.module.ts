@@ -8,7 +8,8 @@ import { EditProyectoComponent } from './component/proyectos/edit-proyecto.compo
 import { EditEstudioComponent } from './component/estudio/edit-estudio.component';
 
 import { EditSkillComponent } from './component/hys/edit-skill.component';
-import { EditAcercaDeComponent } from './component/encabezado/edit-acerca-de.component';
+
+import { EditAcercaComponent } from './component/acerca/edit-acerca.component';
 
 
 
@@ -23,8 +24,9 @@ const router: Routes = [
   { path: 'editcono/:id', component: EditEstudioComponent},
   
   { path: 'editskill/:id', component: EditSkillComponent},
+
+  { path: 'editace/:id', component: EditAcercaComponent}
   
-  { path: 'edit/:id', component: EditAcercaDeComponent}
 
 ];
 

@@ -4,14 +4,14 @@
         <div>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
 
-                    <label for="nombreE">Nombre del proyecto</label>
+                    <label for="nombreP">Nombre del proyecto</label>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="nombreE" [(ngModel)]="proyect.nombreP" required>
+                    <input type="text" class="form-control" name="nombreP" [(ngModel)]="proyect.nombreP" required>
                 </div>
                 
-                    <label for="descripcionE">Descripcion del proyecto</label>
+                    <label for="descripcionP">Descripcion del proyecto</label>
                 <div class="form-group">
-                    <textarea cols="155" rows="10"  type="text" class="form-control" name="descripcionE" [(ngModel)]="proyect.descripcionP" required></textarea>
+                    <textarea cols="155" rows="10"  type="text" class="form-control" name="descripcionP" [(ngModel)]="proyect.descripcionP" required></textarea>
 
                 </div>
                 <button class="btn-bi">

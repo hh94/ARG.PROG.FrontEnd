@@ -1,0 +1,37 @@
+
+<div class="container" *ngIf="aceca">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                
+
+                <label for="nombreA">Nombre</label>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nombreA" name="nombreA" [(ngModel)]="aceca.nombreA" required>
+                </div>
+                
+                <label for="apellidoA">Apellido</label>
+                <div class="form-group">
+                    <textarea cols="155" type="text" class="form-control" id="apellidoA" name="apellidoA" [(ngModel)]="aceca.apellidoA" required></textarea>
+                </div>
+
+                <label for="profesionA">Profesion</label>
+            <div class="form-group">
+                <textarea cols="155" type="text" class="form-control" id="profesionA" name="profesionA" [(ngModel)]="aceca.profesionA" required></textarea>
+            </div>
+
+                <label for="sobreTiA">Acerca de ti</label>
+            <div class="form-group">
+                <textarea cols="155" rows="10"  type="text" class="form-control" id="sobreTiA" name="sobreTiA" [(ngModel)]="aceca.sobreTiA" required></textarea>
+            </div>
+                
+                <button class="btn-bi">
+                    Actualizar
+                </button>
+                
+                <button  class="btn-bi" style="float: left;" heref="#acerc">
+                    <i class="bi bi-arrow-left"></i>
+                </button>
+            </form>
+        </div>
+    </div>

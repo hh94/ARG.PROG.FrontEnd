@@ -24,8 +24,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { EncabezadoComponent } from './component/encabezado/encabezado.component';
 import { ExperienciaComponent } from './component/Experiencia/experiencia.component';
+import { AcercaComponent } from './component/acerca/acerca.component';
+import { EditAcercaComponent } from './component/acerca/edit-acerca.component';
 
-import { EditAcercaDeComponent } from './component/encabezado/edit-acerca-de.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { EditAcercaDeComponent } from './component/encabezado/edit-acerca-de.com
     EditEstudioComponent,
     EditSkillComponent,
     HysComponent,
-    EditAcercaDeComponent
+    AcercaComponent,
+    EditAcercaComponent
     
   ],
   imports: [

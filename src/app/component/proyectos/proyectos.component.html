@@ -18,13 +18,13 @@
                 <div class="row">
                         <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
             
-                                <label for="nombreE">Nombre del proyecto</label>
+                                <label for="nombreP">Nombre del proyecto</label>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="nombreE" [(ngModel)]="nombreE" required>
+                                <input type="text" class="form-control" name="nombreP" [(ngModel)]="nombreP" required>
                             </div>
-                                <label for="descripcionE">Descripcion del proyecto</label>
+                                <label for="descripcionP">Descripcion del proyecto</label>
                             <div class="form-group">
-                                <textarea cols="161" rows="10" type="text" class="form-control tam" id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required></textarea>
+                                <textarea cols="161" rows="10" type="text" class="form-control tam" id="descripcionP" name="descripcionP" [(ngModel)]="descripcionP" required></textarea>
                             </div>
                             
                             <button class="btn-bi"  onclick="location.reload();">

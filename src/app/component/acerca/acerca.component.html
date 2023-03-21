@@ -1,0 +1,81 @@
+
+<div class="containerColumn">
+
+    <div class="item2">
+        
+        <button style="margin: 13px 20px 0 0;" class="btn-bi" *ngIf="isLogged"  onclick="acerc(); return false;">
+            Nuevo
+        </button> 
+
+        <div class="containerColumn">
+            <div id="acerc" style="float: right; margin: 60px -110px 0 0; display: none;" >
+
+                <div class="row">
+                        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            
+                            <label for="nombreA">Nombre</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="nombreA" [(ngModel)]="nombreA" required>
+                            </div>
+                            
+                            <label for="apellidoA">Apellido</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control tam" name="apellidoA" [(ngModel)]="apellidoA" required>
+                            </div>
+
+                            <label for="profesionA">Profesion</label>
+                            <div class="form-group">
+                                <input  type="text" class="form-control tam" name="profesionA" [(ngModel)]="profesionA" required>
+                            </div>
+
+                            <label for="sobreTiA">Sobre vos</label>
+                            <div class="form-group">
+                                <textarea cols="50" rows="10" type="text" class="form-control tam" name="sobreTiA" [(ngModel)]="sobreTiA" required></textarea>
+                            </div>
+                            
+                            <button class="btn-bi" onclick="location.reload()">
+                                Agregar
+                            </button>
+                        </form>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+                <div *ngFor=" let Acerca of aceca">
+                    <div *ngIf="isLogged">
+                        <div style="float: right; margin: 80px -90px 80px 0px;">
+
+                            <button  class="btn-bi" routerLink="editace/1">
+                                <i class="bi bi-pencil-fill"></i> 
+                            </button>
+                        
+                            <button  class="btn-bi" (click)="delete(Acerca.id)">
+                                <i class=" bi bi-x"></i>
+                            </button>
+                        </div>                                
+                    </div>
+                    <div>
+                        <hr>
+                        <h2>
+                            {{Acerca.nombreA}}
+                        </h2>
+                        <h2>
+                            {{Acerca.apellidoA}}
+                        </h2>
+                        <span>
+                            {{Acerca.profesionA}}
+                        </span>
+                        <span>
+                            {{Acerca.sobreTiA}}
+                        </span>
+                        
+                        <hr>
+
+                    </div>
+                </div>
+
+        <hr>
+
+    </div>
+</div>

@@ -1,15 +1,10 @@
 
  
  /*-------------------------------------------------------------------imagenes encabezado y usuario-------------------------------------------------------------------------*/
- .item2{
-  color: var(--text-color);
- }
-
-
  .contenedorE{
   background-color: var(--colum-container-background-color);
   margin: 0% 4% 0% 2%;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px 8px 150px 150px;
 }
  img {
     position: relative;
@@ -23,12 +18,13 @@
     border-radius: 8px 8px 0 0;
   }
   .usuario {
-    width: 250px;
-    height: 250px;
+    width: 450px;
+    height: 450px;
     /*img redonda*/
     border-radius: 50%;  
     z-index: 2;
-    margin: -7% 8% 2% 3%; 
+    margin: -10% 2% 2% 35%; 
+    box-shadow:  5px 10px 20px 10px rgba(0, 0, 0, 0.336);
   }
   .logo {
       width: 30px;
@@ -38,13 +34,15 @@
       margin-left: -25px;
     }
     .item2{
+      color: var(--text-color);
+      height: 180px;
       margin-right: 5px;
       margin-bottom: 15px;
       margin-top: -200px;
       margin-left: 300px;
     }
 
-    /*-----------------------hide*/
+    /*-----------------------*/
 .btn-bi{
   padding: 10px;
   margin-top: -40px;

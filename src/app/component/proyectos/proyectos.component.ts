@@ -14,8 +14,8 @@ export class ProyectosComponent implements OnInit {
 
   proye: Proyecto[] = [];
 
-  nombreE: string = '';
-  descripcionE: string = '';
+  nombreP: string = '';
+  descripcionP: string = '';
 
   constructor( 
               private sProyecto: ProyectoService , 
@@ -34,7 +34,7 @@ export class ProyectosComponent implements OnInit {
   }
 
   onCreate(): void {
-    const proyecto = new Proyecto(this.nombreE, this.descripcionE);
+    const proyecto = new Proyecto(this.nombreP, this.descripcionP);
     this.sProyecto.save(proyecto).subscribe(
       data => {
         alert("Proyecto añadida");
